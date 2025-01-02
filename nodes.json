@@ -1,0 +1,35 @@
+{
+  "links": [
+    {
+      "description": "Comment déléguer",
+      "link": "https://medium.com/notrustverify/vous-voulez-d%C3%A9l%C3%A9guer-sur-nym-voici-comment-choisir-un-mixnode-pour-d%C3%A9l%C3%A9guer-ses-nym-96c3b2b31de0"
+    }
+  ],
+  "mixnodes": [
+    {
+      "idkey": "2uU2uYg37PVwSDWTJFR537bwnystTyJUy3BjuXHkc4GR",
+      "user": ["zBlaxx"],
+      "name": "node4u | 🇫🇷 Lyon",
+      "node id": "33"
+    },
+    {
+      "idkey": "6rC5rmY3bUi5djsuK9LEDTgYZKmxVZ2vkvGox2H77pq2",
+      "user": ["zBlaxx"],
+      "name": "node4u | 🇨🇦 Beauharnois",
+      "node id": "867"
+    },
+    {
+      "idkey": "81oyG2qvEN3H2qRVHfZ4v3eoBR2kAFsW5x9AJTiR56hC",
+      "user": ["zBlaxx"],
+      "name": "node4u | 🇹🇼 TAIWAN",
+      "node id": "1682"
+    },
+    {
+      "idkey": "6PmpashL6dVESNY9wbvebi41jrzaxxY7wNdCni2E6w5b",
+      "user": ["HiroshiMat"],
+      "name": "Yuzu - 🇵🇱 Varsovie",
+      "node id": "2149"
+    }
+  ]
+}
+
