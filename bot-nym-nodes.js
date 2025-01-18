@@ -33,12 +33,13 @@ const formatMixnodes = (links, mixnodes) => {
     message += "🪢 *Liste des Mixnodes* 🪢\n";
     mixnodes.forEach((mixnode) => {
       const explorerUrl = `https://explorer.nymtech.net/network-components/nodes/${mixnode['node id']}`;
-      message += `\n*Nom*: ${mixnode.name}`;
-      message += `\n*Explorer*: [Cliquez ici](${explorerUrl})`;
+     const users = mixnode.user 
+        ? mixnode.user.map((user) => `[${user.replace(/^@/, '')}](https://t.me/${user.replace(/^@/, '')})`).join(', ') 
+        : "Aucun utilisateur";
+
+      message += `\n${users} - *${mixnode.name}*`; // Format : USER - NOM
       message += `\n*ID Key*: \`${mixnode.idkey}\``;
-      if (mixnode.user) {
-        message += `\n*Utilisateurs*: ${mixnode.user.map((user) => `@${user}`).join(', ')}`;
-      }
+      message += `\n*Explorer*: [Cliquez ici](${explorerUrl})`;
       message += `\n`;
     });
   } else {
@@ -49,7 +50,7 @@ const formatMixnodes = (links, mixnodes) => {
 };
 
 // Initialisation du bot
-const TELEGRAM_TOKEN = 'xxxx'; // Remplacez par votre token
+const TELEGRAM_TOKEN = 'xxxxx'; // Remplacez par votre token
 const bot = new Telegraf(TELEGRAM_TOKEN);
 
 // Commande /m pour afficher les mixnodes
@@ -73,4 +74,3 @@ bot.launch().then(() => {
 bot.catch((err) => {
   console.error('Erreur dans le bot:', err);
 });
-
